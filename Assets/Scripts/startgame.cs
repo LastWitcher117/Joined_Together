@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Exit : MonoBehaviour
+public class startgame : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,15 +14,8 @@ public class Exit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2" || collision.gameObject.tag == "Player3" || collision.gameObject.tag == "Player4")
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
