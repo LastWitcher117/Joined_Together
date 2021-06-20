@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public float speed;
-    private Rigidbody2D rb;
+    private Rigidbody rb;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
